@@ -1,0 +1,39 @@
+.form-input {
+	display: flex;
+	flex-direction: column;
+	min-width: 280px;
+	margin-bottom: 1em;
+}
+.form-input label {
+	line-height: 1;
+	margin-bottom: 0.5em;
+	display: inline-block;
+	cursor: pointer;
+}
+.form-input input {
+	width: 100%;
+	padding: 0.75em 1em;
+	border: 0.125em solid #000;
+	border-radius: 0.25em;
+	outline: none;
+	background: rgba(255, 255, 255, 0.25);
+}
+
+.form-input input::placeholder {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.form-input span {
+	display: none;
+	margin: 0.25em 0 0;
+	font-size: 0.875em;
+	color: #f00;
+}
+
+.form-input input:invalid[focused='true'] {
+	border-color: #f00;
+}
+
+.form-input input:invalid[focused='true'] ~ span {
+	display: block;
+}
